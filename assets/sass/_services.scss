@@ -1,0 +1,208 @@
+.services {
+    .hero{
+        background: url(../img/services/hero.jpg) no-repeat center right/cover;
+    }
+    
+    .platform {
+        .platformCard {
+            box-shadow: 7px 14px 64px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            background: $primaryLight;
+            height: 100%;
+
+            .imgContainer {
+                position: relative;
+                width: 100%;
+                padding-top: 30%;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .contentContainer {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            @media screen and (max-width: 767px) {
+                padding: 1rem;
+
+                .contentContainer {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .platformSlider {
+            overflow: visible;
+            height: 45rem;
+
+            .swiper-slide {
+                height: calc((100% - 20px) / 2) !important;
+                overflow: visible !important;
+            }
+
+            @media screen and (max-width: 767px) {
+                height: auto;
+
+                .swiper-slide {
+                    height: auto !important;
+                }
+            }
+        }
+
+        .platformDots {
+            width: 100%;
+            margin-top: 2rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .buttonWrapper {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            @media screen and (max-width: 767px) {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 0 !important;
+            }
+
+
+            .platformArrows {
+                height: 2.5rem;
+                width: 2.5rem;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                z-index: 9;
+                border: 1px solid;
+                transition: all ease 0.3s;
+                font-size: 1.25rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &.platformPrev {
+                    background: #FFF;
+                    border-color: $black;
+                    color: $black;
+                    margin-right: 1rem;
+                }
+
+                &.platformNext {
+                    background: $black;
+                    color: #FFF;
+                    border-color: transparent;
+                    position: relative;
+                    z-index: 0;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        border-radius: 100%;
+                        padding: 2px;
+                        background: $gradientBorder;
+                        -webkit-mask:
+                            linear-gradient(#fff 0 0) content-box,
+                            linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: xor;
+                        mask-composite: exclude;
+                    }
+                }
+            }
+        }
+    }
+
+    .brands {
+        // background: url(../img/global/brands.jpg) no-repeat center center/cover;
+        background: #13151C;
+
+        .sliderWrapper {
+            position: relative;
+            // padding: 0 3rem;
+
+            .brandsSlider {
+                .swiper-slide {
+                    width: 100%;
+                    height: 80px;
+
+                    padding: 1.25rem 1.5rem;
+                    background: #FFF;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        filter: grayscale(1);
+                    }
+                }
+
+                @media screen and (max-width: 992px) {
+                    height: 150px;
+                    touch-action: none;
+                    pointer-events: none;
+
+                    .swiper-slide {
+                        width: 100%;
+                        height: calc((100% - 20px) / 2) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .privacy {
+        &.imageContent {
+            &.mobileMargin {
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+
+        .contentCol {
+            @media screen and (min-width: 768px) {
+                padding: 5rem 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .imageCol {
+            img {
+                object-position: center;
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.services,
+.about {
+    .hero {
+        .contentWrapper {
+            padding: 10rem 0;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}

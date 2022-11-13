@@ -1,0 +1,202 @@
+.contact {
+    .formSection {
+        min-height: 100vh;
+        background: url(../img/contact/hero.png) no-repeat top left/cover;
+        padding: 10rem 0;
+        margin: 0;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+
+        .contactWrapper {
+            margin-top: 5rem;
+            box-shadow: 8px 7px 39px rgba(25, 25, 38, 0.47);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #383B4A;
+            flex-wrap: wrap;
+
+            .left,
+            .formWrapper {
+                width: 100%;
+                // flex: 0 0 50%;
+                // max-width: 50%;
+                padding: 5rem 4rem;
+                position: relative;
+
+                @media screen and (max-width: 992px) {
+                    padding: 2rem;
+                }
+
+                @media screen and (max-width: 767px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding: 3rem 1.5rem;
+                }
+
+                .vSuccess, .vError{
+                    width: 100%;
+                    text-align: center;
+                    border-radius: 0px !important;
+                    margin-bottom: 2rem;
+                }
+
+                ul{
+                    &.parsley-errors-list{
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        li{
+                            color: #cc0000;
+                            font-size: 0.9rem;
+                            margin-top: 0.25rem;
+                        }
+                    }
+                }
+
+
+                .form-control,
+                .form-select {
+                    background-color: #2E3140 !important;
+                    color: #FFF !important;
+
+                    &::placeholder {
+                        color: #FFF !important;
+                    }
+                }
+
+                .form-select {
+                    color: #FFF !important;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z' fill='rgba(250,250,250,1)'/%3E%3C/svg%3E");
+                }
+            }
+
+            .left {
+                position: relative;
+                // border-right: 1px solid #747589;
+
+                @media screen and (min-width: 768px) {
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        height: 80%;
+                        width: 1px;
+                        transform: translateY(-50%);
+                        background: #747589;
+                    }
+                }
+
+                @media screen and (max-width: 767px) {
+                    order: 1;
+                    padding-top: 0;
+                }
+
+                .imgContainer {
+                    // width: 70%;
+                    // padding-top: 70%;
+                    position: relative;
+                    margin: 0 auto;
+                    text-align: center;
+
+                    video {
+                        width: 100%;
+            
+                        &.shy {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+            
+                    canvas{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
+            
+
+                    img {
+                        // position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 80%;
+                        object-fit: contain;
+                        margin: 0 auto;
+                    }
+                }
+
+                .detailsContainer {
+                    margin-top: 2rem;
+
+                    .details {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        .detailItem {
+                            margin-bottom: 1rem;
+
+                            .detailLink {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                text-decoration: none;
+
+                                .icon {
+                                    background: $btnDark;
+                                    color: #FFF;
+                                    border: 1px solid #FFF;
+                                    border-radius: 100%;
+                                    height: 2.5rem;
+                                    width: 2.5rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 1rem;
+                                    flex: 0 0 2.5rem;
+                                }
+
+                                .text {
+                                    min-height: 2.5rem;
+                                    align-items: center;
+                                    color: #FFF;
+                                    display: flex;
+                                }
+                            }
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+
+                                .detailLink {
+                                    line-height: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .formWrapper {
+                @media screen and (max-width: 767px) {
+                    order: 0;
+                }
+
+                .buttonContainer{
+                    margin-top: 1.5rem;
+                    .w-50{
+                        @media screen and (max-width: 767px) {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

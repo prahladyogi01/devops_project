@@ -1,0 +1,130 @@
+.imageContent {
+    &.mobileMargin {
+        @media screen and (max-width: 767px) {
+            margin: 2.5rem 0 !important;
+        }
+    }
+
+    &.smallMargin {
+        margin: 2.5rem 0;
+    }
+
+    .imageCol {
+        overflow: hidden;
+        position: relative;
+
+        &.spaced{
+            padding: 5rem 0 5rem 5rem !important;
+
+            @media screen and (max-width: 767px) {
+                padding: 0 !important;
+            }
+        }
+
+        video {
+            width: 100%;
+
+            &.shy {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        .imgContainer {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            // padding-top: 100%;
+
+            @media screen and (max-width: 1023px) {
+                min-height: unset;
+            }
+
+            img {
+                // position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .contentCol {
+        position: relative;
+
+        p {
+            text-align: justify !important;
+            text-align-last: left !important;
+        }
+
+        @media screen and (min-width: 767px) {
+            padding: 0 50px 0 15px;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            position: relative;
+
+            .number {
+                position: absolute;
+                left: 0%;
+                top: -60px;
+                font-size: 400%;
+                font-weight: 900;
+                color: #ebebeb;
+                z-index: -1;
+                line-height: 0.7;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin-top: 3rem;
+
+                .number {
+                    left: 50%;
+                    top: -50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+            }
+        }
+
+        .content {
+            margin: 5rem auto;
+
+            @media screen and (max-width: 767px) {
+                margin: 2rem auto 3.5rem auto;
+            }
+        }
+    }
+
+    .flex-md-row-reverse {
+
+        .imageCol {
+            .imgContainer {
+                img {
+                    @media screen and (min-width: 767px) {
+                        object-position: left;
+                    }
+                }
+            }
+        }
+
+        .contentCol {
+            @media screen and (min-width: 767px) {
+                padding: 0 15px 0 50px;
+            }
+        }
+    }
+}

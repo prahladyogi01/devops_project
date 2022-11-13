@@ -1,0 +1,212 @@
+//Heading Sizes
+h1 {
+    font-size: 3rem;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 2rem;
+    }
+
+    small{
+        font-size: 70%;
+        display: block;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.75rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 1.75rem;
+    }
+
+    &.big {
+        font-size: 2.5rem;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.75rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.75rem;
+        }
+    }
+
+
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 1.5rem;
+    }
+}
+
+h4 {
+    font-size: 1.3rem;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.15rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 1.15rem;
+    }
+}
+
+h5 {
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.05rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 1.05rem;
+    }
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+
+    &.big {
+        font-size: 1.2rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1rem;
+        }
+    }
+
+    &.small{
+        font-size: 0.8rem;
+    }
+
+    &.primary{
+        color: #cc0000;
+    }
+}
+
+
+//Text Varients
+.extraBold {
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.camelCase {
+    text-transform: capitalize;
+}
+
+.upperCase {
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+}
+
+//Alignments
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.mobileLeft {
+    @media screen and (max-width: 767px) {
+        text-align: left !important;
+    }
+}
+
+.mobileCenter {
+    @media screen and (max-width: 767px) {
+        text-align: center !important;
+    }
+}
+
+.tabCenter {
+    @media screen and (max-width: 991px) {
+        text-align: center !important;
+    }
+}
+
+.justify {
+    text-align: justify;
+
+    &.justify-last-center{
+        text-align-last: center;
+    }
+}
+
+//Margins and Line Heights
+.lh1 {
+    line-height: 1;
+}
+
+.lh1point2 {
+    line-height: 1.2;
+}
+
+.lh1point5 {
+    line-height: 1.5;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.8rem;
+}
+
+//Colors
+.primary{
+    color: #6A4CA5;
+}
+
+.black{
+    color: #33373F;
+}

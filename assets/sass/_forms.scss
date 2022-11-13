@@ -1,0 +1,33 @@
+.form-control,
+.form-select {
+    resize: none;
+    padding: 0.8rem 1rem;
+    background-color: rgba($color: #0000, $alpha: 0.2);
+    border-radius: unset !important;
+    border: 1px solid transparent;
+    font-size: 0.9rem !important;
+    font-family: "Inter", sans-serif !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: rgba($color: #0000, $alpha: 0.2);
+        box-shadow: unset;
+        border-color: #FFF;
+    }
+
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='240' height='240'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+    background-size: 1.5rem;
+
+    option{
+        color: #FFF;
+        background: $primaryLight;
+        
+        &:first-of-type {
+            color: #6B717C;
+        }
+    }
+}

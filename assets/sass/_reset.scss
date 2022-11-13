@@ -1,0 +1,217 @@
+// // Font Family
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+//     font-weight: 800;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+//     font-weight: 700;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+//     font-weight: 500;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url('../fonts/"Gilroy", sans-serif.woff2') format("woff2"), url('../fonts/"Gilroy", sans-serif.woff') format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Gilroy";
+//     src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
+//     font-weight: 100;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+video {
+    width: 100%;
+}
+
+html {
+    font-size: 20px;
+
+    @media screen and (max-width: 1400px) {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    background: $primary;
+
+    &.oh {
+        overflow: hidden;
+    }
+}
+
+.upperGradient,
+    .lowerGradient {
+        height: 0.5rem;
+        background: $gradientBorder;
+
+        &.small{
+            height: 0.25rem;
+        }
+    }
+
+section {
+    margin: 5rem 0;
+    overflow: hidden;
+    background: $primary;
+    color: #FFF;
+
+    @media screen and (max-width: 767px) {
+        margin: 3.5rem auto;
+    }
+
+    &.ov {
+        overflow: visible;
+    }
+
+    &.padded {
+        padding: 5rem 0;
+        margin: 0;
+
+        &.big{
+            padding: 8rem 0;
+        }
+
+        &-mobile {
+            padding: 0;
+
+            @media screen and (max-width: 767px) {
+                padding: 5rem 0 !important;
+            }
+        }
+
+        &-tab {
+            @media screen and (max-width: 992px) {
+                padding: 5rem 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 3.5rem 0;
+        }
+    }
+
+    &.brands {
+        .brandsArrows {
+            position: absolute;
+            // top: calc(50% - 1rem);
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2rem;
+            width: 2rem;
+            padding: 0.5rem;
+            background: #FFF;
+            color: $black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            z-index: 9;
+            transition: all ease 0.3s;
+
+            &.brandsPrev {
+                left: 0.5rem;
+            }
+
+            &.brandsNext {
+                right: 0.5rem;
+            }
+        }
+
+        .brandsDots {
+            width: 100%;
+            margin-top: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+    }
+}
+
+
+@media (min-width: 1600px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1500px;
+    }
+}
+
+//Swiper
+.swiper {
+    width: 100%;
+}
+
+.swiper-button-disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.mb-15{
+    margin-bottom: 0.75rem;
+}
